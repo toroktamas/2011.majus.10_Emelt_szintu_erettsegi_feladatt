@@ -31,6 +31,14 @@ szotar={
     }
 }
 """
+"""feladat megoldas."""
+szora = str()
+with open("szoveg.txt", 'rt+', encoding="utf-8") as er:
+    ero = er.readline()
+    erod = ero.replace("\n", "")
+    if len(erod) > len(szora):
+        szora = erod
+print("Ez a szo a leghosszabb: {} es ilyen hosszu: {}".format(szora, len(szora)))
 n = 0
 szotar = {}
 with open("szoveg.txt","rt+",encoding="utf-8") as f:
